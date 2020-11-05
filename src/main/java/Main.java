@@ -51,6 +51,5 @@ public class Main {
 
         String firstWin = driver.findElement(By.id("score-1")).getText();
         Assert.assertTrue(firstWin.contains("1"));
-
     }
 }
