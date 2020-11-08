@@ -36,7 +36,7 @@ public class Main {
 
     public static void testy_MC_test_test_test(){
         try {
-            Thread.sleep(5000);
+            Thread.sleep(1000);
             clickSelect("player1-icon", "tessa_b");
             clickCell(0);
             clickCell(7);
@@ -47,9 +47,11 @@ public class Main {
             e.printStackTrace();
         }
         String whoWon = driver.findElement(By.id("playerwon")).getText();
-        Assert.assertTrue(whoWon.contains("player1 won the match!"));
+        Assert.assertTrue(!whoWon.contains("player1 won the match!"));
 
         String firstWin = driver.findElement(By.id("score-1")).getText();
         Assert.assertTrue(firstWin.contains("1"));
+
     }
+
 }
