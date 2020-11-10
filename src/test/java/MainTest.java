@@ -9,7 +9,7 @@ public class MainTest extends TestCase {
     Main test = new Main();
 
     public void pre_test(){
-        System.setProperty("webdriver.chrome.driver","D:\\Program\\Chrom_Selenium_Driver\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver","C:\\Users\\Pascal\\OneDrive for Business\\Uni\\1. Semester\\08. Wintersemester 2020_2021\\3. Certified Tester\\3. Praktikum _ Labor\\99. Workspace\\chromedriver.exe");
         test.driver = new ChromeDriver();
         test.driver.get("https://ct.informatik.haw-hamburg.de/tessa_tac_toe/");
     }
@@ -212,6 +212,7 @@ public class MainTest extends TestCase {
             e.printStackTrace();
         }
         Assert.assertTrue(case6);
+        test.driver.close();
     }
 
     public void testCase7() {
